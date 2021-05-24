@@ -1,0 +1,4 @@
+(library
+ (name cuz)
+ (libraries astring cohttp-lwt-unix decompress.gz unix)
+ (preprocess future_syntax))
