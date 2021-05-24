@@ -15,15 +15,11 @@
 
 (package
  (name cuz)
- (synopsis "Gzip compression support for cohttp-lwt-unix")
+ (synopsis "Gzip compression support for cohttp-lwt using decompress")
  (depends
   (ocaml
    (>= 4.08))
-  (astring
-   (>= 0.8.0))
-  (cohttp-lwt-unix
+  (cohttp-lwt
    (>= 2.5.0))
   (decompress
-   (>= 1.3.0))
-  (tls
-   (>= 0.12.0))))
+   (>= 1.3.0))))
