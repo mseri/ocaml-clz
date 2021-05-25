@@ -16,6 +16,7 @@
 (package
  (name cuz)
  (synopsis "Gzip compression support for cohttp-lwt using decompress")
+ (documentation "https://www.mseri.me/ocaml-cuz")
  (depends
   (ocaml
    (>= 4.08))
