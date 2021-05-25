@@ -1,4 +1,10 @@
-(* Mostly from deflate.gz documentation :) *)
+(*
+  Mostly from deflate.gz documentation :) 
+  If somebody cares, we could abstract them over Cohttp and Lwt
+  and have an implementation that can work with streamed response bodies
+  and does directly output to file.
+  The current dumb implementation is more than enough for my limited needs.
+*)
 
 let uncompress_string str =
   let i = De.bigstring_create De.io_buffer_size in
