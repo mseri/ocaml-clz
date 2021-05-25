@@ -5,7 +5,7 @@ maintainer: ["marcello.seri@gmail.com"]
 authors: ["Marcello Seri"]
 license: "MIT"
 homepage: "https://github.com/mseri/ocaml-cuz"
-doc: "https://www.mseri.me/ocaml-cuz"
+doc: "https://mseri.github.io/ocaml-cuz"
 bug-reports: "https://github.com/mseri/ocaml-cuz/issues"
 depends: [
   "dune" {>= "2.0"}
