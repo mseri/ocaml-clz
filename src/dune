@@ -1,7 +1,7 @@
 (library
  (public_name cuz)
  (name cuz)
- (modules :standard \ cuz_unix cuz_lwt)
+ (modules :standard \ cuz_unix cuz_cohttp)
  (libraries cohttp-lwt decompress.gz)
  (preprocess future_syntax))
 
@@ -13,8 +13,8 @@
  (preprocess future_syntax))
 
 (library
- (public_name cuz.lwt)
- (name cuz_lwt)
- (modules cuz_lwt)
- (libraries cohttp-lwt cuz)
+ (public_name cuz.cohttp)
+ (name cuz_cohttp)
+ (modules cuz_cohttp)
+ (libraries cohttp-lwt cuz lwt)
  (preprocess future_syntax))
