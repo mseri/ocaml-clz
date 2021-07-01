@@ -20,7 +20,11 @@
  (depends
   (ocaml
    (>= 4.08))
+  (bigstringaf
+   (>= 0.2.0))
   (cohttp-lwt
    (>= 2.5.0))
+  (lwt
+   (>= 5.3.0))
   (decompress
-   (>= 1.3.0))))
+   (>= 1.4.0))))
