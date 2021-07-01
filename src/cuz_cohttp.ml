@@ -37,9 +37,11 @@ let decompress (resp, body) =
     | Error (`Msg err) -> Lwt.fail (CuzError err))
 
 
-let accept_gzde =
+let accept_gzde ?(force = false) =
   let open Cohttp.Header in
   let gzip_h = of_list [ "accept-encoding", "gzip,deflate" ] in
   function
   | None -> gzip_h
-  | Some h -> add h "accept-encoding" "gzip,deflate"
+  | Some h ->
+    let add = if force then add else add_unless_exists in
+    add h "accept-encoding" "gzip,deflate"
