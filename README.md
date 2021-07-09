@@ -17,3 +17,9 @@ let get_with_compression_support ?headers uri =
     Lwt.return body
   | _ -> Lwt.fail_with "Not Ok"
 ```
+
+## Why CUZ
+
+The name was suposed to be temporary: `Cohttp U Gzip`, which was what the
+first implementation was all about. I use it in a lot of programs now, changing it
+would be way too time-consuming :P
