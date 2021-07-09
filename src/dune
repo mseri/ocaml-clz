@@ -9,8 +9,7 @@
  (public_name cuz.cfg)
  (name cuz_cfg)
  (modules cuz_cfg)
- (libraries decompress.gz ptime.clock.os)
- (preprocess future_syntax))
+ (libraries decompress.gz ptime.clock.os))
 
 (library
  (public_name cuz.cohttp)

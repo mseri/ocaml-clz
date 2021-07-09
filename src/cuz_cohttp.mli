@@ -1,9 +1,9 @@
 exception CuzError of string
 
 (** [decompress (resp, body)] returns the contents of body, decompressed
-using the information from the "content-encoding" header or fails with
-[CuzError msg] if there are decompression issues or an unknown algorithm
-is required.
+  using the information from the "content-encoding" header or fails with
+  [CuzError msg] if there are decompression issues or an unknown algorithm
+  is required.
 *)
 val decompress : Cohttp_lwt.Response.t * Cohttp_lwt.Body.t -> string Lwt.t
 
