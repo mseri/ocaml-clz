@@ -1,15 +1,15 @@
 (library
  (public_name cuz)
  (name cuz)
- (modules :standard \ cuz_unix cuz_cohttp)
- (libraries cohttp-lwt lwt decompress.gz decompress.de)
+ (modules :standard \ cuz_cfg cuz_cohttp)
+ (libraries bigstringaf decompress.gz decompress.de)
  (preprocess future_syntax))
 
 (library
- (public_name cuz.unix)
- (name cuz_unix)
- (modules cuz_unix)
- (libraries decompress.gz unix)
+ (public_name cuz.cfg)
+ (name cuz_cfg)
+ (modules cuz_cfg)
+ (libraries decompress.gz ptime.clock.os)
  (preprocess future_syntax))
 
 (library

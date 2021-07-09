@@ -7,7 +7,7 @@ is required.
 *)
 val decompress : Cohttp_lwt.Response.t * Cohttp_lwt.Body.t -> string Lwt.t
 
-(** [accept_gzde h] returns a new header including "accept-encoding: gzip,deflate"
+(** [update_header h] returns a new header including "accept-encoding: gzip,deflate"
   if [h=None] or [force=true]. When [force=false] (default) it adds the header
   only if was not already present. *)
-val accept_gzde : ?force:bool -> Cohttp.Header.t option -> Cohttp.Header.t
+val update_header : ?force:bool -> Cohttp.Header.t option -> Cohttp.Header.t
