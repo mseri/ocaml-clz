@@ -1,5 +1,7 @@
 # Compression support for cohttp-lwt using decompress
 
+[![CI Status](https://github.com/mseri/ocaml-cuz/actions/workflows/workflow.yml/badge.svg)](https://github.com/mseri/ocaml-cuz/actions/workflows/workflow.yml)
+
 The library interface tries to stay somewhat close to
 [dream-encoding](https://github.com/tmattio/dream-encoding).
 
