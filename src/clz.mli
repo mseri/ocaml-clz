@@ -1,5 +1,5 @@
 (**
-  The [cuz.cohttp] library contains the module {!Cuz_cohttp}, which provides
+  The [clz.cohttp] library contains the module {!Clz_cohttp}, which provides
   some helpers to add the necessary accept headers and to decompress the response
   bodies.
   It is possible to make the implementation seamlessly work with streamed response
@@ -21,7 +21,7 @@ val inflate_string
 
   [deflate_string] requires an external configuration to make the library
   compatible with [mirage] and [js_of_ocaml]. If you don't mind linking
-  against [unix] you can use {!Cuz_cfg.cfg}, part of the [cuz.cfg] sub-library.*)
+  against [unix] you can use {!Clz_cfg.cfg}, part of the [clz.cfg] sub-library.*)
 val deflate_string
   :  algorithm:[< `Deflate | `Gzip ]
   -> cfg:unit Gz.Higher.configuration

@@ -1,4 +1,4 @@
-exception CuzError of string
+exception ClzError of string
 
 let encoding_of_string = function
   | "deflate" -> `Deflate
@@ -18,7 +18,7 @@ let decompress (resp, body) =
     match algorithms with
     | [] -> Ok content
     | (`Deflate as el) :: rest | (`Gzip as el) :: rest ->
-      Result.bind (Cuz.inflate_string ~algorithm:el content) (aux rest)
+      Result.bind (Clz.inflate_string ~algorithm:el content) (aux rest)
     | `Unknown d :: _rest -> Error (`Msg ("Unsopported encoding directive '" ^ d ^ "'"))
   in
   let open Lwt.Syntax in
@@ -34,7 +34,7 @@ let decompress (resp, body) =
     let body = aux algorithms body in
     (match body with
     | Ok body -> Lwt.return body
-    | Error (`Msg err) -> Lwt.fail (CuzError err))
+    | Error (`Msg err) -> Lwt.fail (ClzError err))
 
 
 let update_header ?(force = false) =

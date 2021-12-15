@@ -1,4 +1,4 @@
-open Cuz_decompress
+open Clz_decompress
 
 let inflate_string ~algorithm str =
   match algorithm with
