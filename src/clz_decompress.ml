@@ -26,7 +26,6 @@ let inflate_string_de str =
   | Ok () -> Ok (Buffer.contents r)
   | Error _ as err -> err
 
-
 let deflate_string_de str =
   let i = De.bigstring_create De.io_buffer_size in
   let o = De.bigstring_create De.io_buffer_size in
@@ -49,7 +48,6 @@ let deflate_string_de str =
   De.Higher.compress ~w ~q ~refill ~flush i o;
   Buffer.contents r
 
-
 let inflate_string_gz str =
   let i = De.bigstring_create De.io_buffer_size in
   let o = De.bigstring_create De.io_buffer_size in
@@ -67,7 +65,6 @@ let inflate_string_gz str =
   in
   Gz.Higher.uncompress ~refill ~flush i o
   |> Result.map (fun _metadata -> Buffer.contents r)
-
 
 let deflate_string_gz ~cfg ?(level = 4) str =
   let i = De.bigstring_create De.io_buffer_size in

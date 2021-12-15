@@ -5,7 +5,6 @@ let inflate_string ~algorithm str =
   | `Deflate -> inflate_string_de str
   | `Gzip -> inflate_string_gz str
 
-
 let deflate_string ~algorithm ~cfg ?level str =
   match algorithm with
   | `Deflate -> deflate_string_de str
